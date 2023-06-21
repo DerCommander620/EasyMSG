@@ -18,6 +18,7 @@ class MSGCommand extends Command{
                     $p = $args[0];
                     if ($p instanceof Player) {
                         $p->sendMessage($args[1]);
+                        $sender->sendMessage("§dZu " . $p->getDisplayName() . "§e: §a" . $args[1])
                     }
                 }
                 if(!$p){
