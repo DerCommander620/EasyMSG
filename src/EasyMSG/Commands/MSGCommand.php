@@ -14,8 +14,8 @@ class MSGCommand extends Command{
     public function execute(CommandSender $sender, string $commandLabel, array $args){
         if($sender instanceof Player){
             if (isset($args[0])) {
-                if(isset($data[1])){
-                    $p = $data[0];
+                if(isset($args[1])){
+                    $p = $args[0];
                     if ($p instanceof Player) {
                         $p->sendMessage($args[1]);
                     }
@@ -25,7 +25,7 @@ class MSGCommand extends Command{
                 }
             }            
         }else{
-            $sender->sendMessage("You can`t Message other Players as a Unvalid Entity!");
+            $sender->sendMessage("You cant Message other Players as a Unvalid Entity!");
         }
     }
 }
