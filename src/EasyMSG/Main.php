@@ -12,7 +12,6 @@ class Main extends PluginBase{
     public function onLoad(): void{
         self::setInstance($this);
         Server::getInstance()->getCommandMap()->unregister(Server::getInstance()->getCommandMap()->getCommand("tell"));
-        Server::getInstance()->getCommandMap()->unregister(Server::getInstance()->getCommandMap()->getCommand("msg"));
     }
 
     public function onEnable(): void{
