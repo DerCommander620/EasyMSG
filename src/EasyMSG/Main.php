@@ -15,7 +15,7 @@ class Main extends PluginBase{
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
         switch($command->getName()){
             case "msg":
-                $player = Server::getInstance()->getPlayerExact($args[0]);
+                $player = Server::getInstance()->getPlayerExact($args([0]));
                 $message = $args([1]);
                 if(empty($args[0])){
                     $sender->sendMessage("§cPlease enter a Player Name!");
