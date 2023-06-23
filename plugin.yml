@@ -3,3 +3,11 @@ version: 1.0.0
 api: 5.1.2
 main: EasyMSG\Main
 author: DerCommander610
+
+commands:
+   msg:
+     description: "Send other Players private Messages!"
+     permission: easymsg.msg.cmd
+permissions:
+   easymsg.msg.cmd:
+     default: true     
